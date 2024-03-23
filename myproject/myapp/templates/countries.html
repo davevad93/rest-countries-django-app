@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+{% load custom_filters %}
+{% load django_bootstrap5 %}
+{% load fontawesome_5 %}
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST Countries Info APP</title>
+    {% bootstrap_css %}
+    {% fontawesome_5_static %}
+    <link rel="stylesheet" href="{% static 'css/countries.css'%}">
+    <script src="{% static 'jquery/jquery.js' %}"></script>
+    <script src="{% static 'js/countries.js' %}"></script>
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Countries of the World</h1>
+            <form method="get" action="{% url 'search_countries' %}" class="form-inline" id="search-form">
+                {{ search_form.search_term }}
+                <button type="submit" id="search-glass">
+                    <i class="fa fa-search"></i>
+                </button>
+                <li id="search-dropdown" class="search-dropdown"></li>
+            </form>
+            {% if not search_form.search_term.value %}
+            <form method="get" action="{% url 'filter_regions' %}" class="form-inline" id="region-filter-form">
+                {{ filter_form.regions }}
+                <label for="regions-select" id="regions-select" class="filter"></label>
+            </form>
+            {% else %}
+            <button type="button" id="back-button" class="btn btn-primary"
+                onclick="window.location.href='/countries'">Back</button>
+            {% endif %}
+        </div>
+    </header>
+    <main>
+        <div id="country-container" class="container">
+            {% for country in country_data %}
+            <div id="country-card">
+                <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag" id="img">
+                <h1 id="country-name">{{ country.name.common }}</h1>
+                <p>Capital:
+                    {% if country.capital %}
+                    {{ country.capital.0 }}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                <p>Population:
+                    {% if country.population %}
+                    {{ country.population }}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                <p>Region:
+                    {% if country.region %}
+                    {{ country.region }}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                <p>Subregion:
+                    {% if country.subregion %}
+                    {{ country.subregion }}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                {% if not search_form.search_term.value %}
+                {% with country.name.common|get_emblems_url as emblems %}
+                {% if emblems %}
+                <img src="{{ emblems }}" alt="{{ country.name.common }} emblem" class="img2">
+                {% else %}
+                <img src="{{ country.coatOfArms.svg }}" alt="{{ country.name.common }} emblem" class="img2">
+                {% endif %}
+                {% endwith %}
+                {% endif %}
+                {% if search_form.search_term.value %}
+                <p>Currencies:
+                    {% if country.currencies %}
+                    {% for currency_code, currency_info in country.currencies.items %}
+                    {{ currency_info.name }}{% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                <p>Languages:
+                    {% if country.languages %}
+                    {% for language_code, language_name in country.languages.items %}
+                    {{ language_name }}{% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                <p>Borders:
+                    {% if country.borders %}
+                    {% for border_country_code in country.borders %}
+                    {{ border_country_code }}{% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                <p>Area:
+                    {% if country.area %}
+                    {{ country.area }} km²
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                <p>Timezones:
+                    {% if country.timezones %}
+                    {% for timezone in country.timezones %}
+                    {{ timezone }}{% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                <p>Top-level domain:
+                    {% if country.tld %}
+                    {{ country.tld.0 }}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </p>
+                {% endif %}
+            </div>
+            {% if search_form.search_term.value %}
+            {% with country.name.common|get_emblems_url as emblems %}
+            {% if emblems %}
+            <div class="emblem-card">
+                <img src="{{ emblems }}" alt="{{ country.name.common }} emblem" class="img3">
+            </div>
+            {% elif country.coatOfArms %}
+            <div class="emblem-card">
+                <img src="{{ country.coatOfArms.svg }}" alt="{{ country.name.common }} emblem" class="img3">
+            </div>
+            {% endif %}
+            {% endwith %}
+            {% endif %}
+            {% if country.description %}
+            <div id="description-card">
+                <h1>ABOUT {{ country.name.common|upper }}:</h1>
+                <p>{{ country.description }}</p>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% if not country_data %}
+            <div id="no-results">
+                <h1>No results found...</h1>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>© 2024 | Davide Presti</p>
+            <a class="link" href="https://github.com/davevad93" target="_blank">
+                <img src="{% static 'img/github-mark-white.png' %}" id="logo" alt="Link to my Github page."
+                    title="Link to my Github page.">
+            </a>
+            <a href="http://www.djangoproject.com/"><img
+                    src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif" alt="Made with Django."
+                    title="Made with Django." /></a>
+        </div>
+    </footer>
+</body>
+
+</html>

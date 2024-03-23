@@ -1,0 +1,45 @@
+{% load custom_filters %}
+{% load static %}
+{% for country in country_data %}
+    <div id="country-card">
+        <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag" id="img">
+        <h1 id="country-name">{{ country.name.common }}</h1>
+        <p>Capital:
+            {% if country.capital %} 
+                {{ country.capital.0 }}
+            {% else %}
+                N/A
+            {% endif %}
+        </p> 
+        <p>Population: 
+            {% if country.population %} 
+              {{ country.population }}
+            {% else %}
+              N/A
+            {% endif %}
+        </p>
+        <p>Region:
+            {% if country.region %}  
+              {{ country.region }}
+            {% else %}
+              N/A
+            {% endif %}
+        </p>
+        <p>Subregion: 
+            {% if country.subregion %} 
+              {{ country.subregion }}
+            {% else %}
+              N/A
+            {% endif %}
+        </p>
+        {% if not search_form.search_term.value  %}
+          {% with country.name.common|get_emblems_url as emblems %}
+            {% if emblems %}
+                <img src="{{ emblems }}" alt="{{ country.name.common }} emblem" class="img2">
+            {% else %}
+                <img src="{{ country.coatOfArms.svg }}" alt="{{ country.name.common }} emblem" class="img2">
+            {% endif %}
+          {% endwith %}
+        {% endif %}
+    </div>
+{% endfor %}
