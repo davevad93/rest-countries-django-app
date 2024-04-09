@@ -12,7 +12,7 @@ class CountrySearchForm(forms.Form):
 class RegionFilterForm(forms.Form):
     regions = forms.ChoiceField(
         choices=(
-            ('All', 'All regions'),
+            ('All', 'All'),
             ('Africa', 'Africa'),
             ('Americas', 'Americas'),
             ('Antarctic', 'Antarctic'),
