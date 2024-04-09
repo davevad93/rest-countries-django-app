@@ -26,12 +26,15 @@
                 <button type="submit" id="search-glass">
                     <i class="fa fa-search"></i>
                 </button>
-                <li id="search-dropdown" class="search-dropdown"></li>
+                <ul>
+                    <li id="search-dropdown" class="search-dropdown"></li>
+                </ul>
             </form>
             {% if not search_form.search_term.value %}
             <form method="get" action="{% url 'filter_regions' %}" class="form-inline" id="region-filter-form">
-                {{ filter_form.regions }}
-                <label for="regions-select" id="regions-select" class="filter"></label>
+                <span id="regions-select" class="filter">
+                    {{ filter_form.regions }}
+                </span>
             </form>
             {% else %}
             <button type="button" id="back-button" class="btn btn-primary"
