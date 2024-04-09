@@ -309,4 +309,89 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        iPad Pro,
+        Nest Hub */
+    @media only screen and (max-width: 1024px) {
+        header {
+            div {
+                h1 {
+                    font-size: 1.2rem;
+                }
+
+                form {
+                    #id_search_term {
+                        margin-left: 100px;
+                    }
+
+                    #search-glass {
+                        margin-left: 470px;
+                    }
+
+                    #id_regions {
+                        width: 110px;
+                        margin-right: 150px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                padding: 1.5rem;
+                grid-gap: 1.5rem;
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    min-height: 430px;
+                    max-height: 430px;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 1rem;
+                    }
+                }
+
+                #description-card {
+                    width: 912px;
+
+                    h1 {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                #img {
+                    width: 200px;
+                    height: 120px;
+                }
+
+                .img2 {
+                    height: 50px;
+                    width: 50px;
+                }
+
+                #country-name {
+                    font-size: 15px;
+                }
+
+                #no-results h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                padding: 1.5rem;
+                font-size: 0.9rem;
+
+                #logo {
+                    width: 25px;
+                }
+            }
+        }
+    }
 }
