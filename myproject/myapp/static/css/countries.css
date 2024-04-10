@@ -452,4 +452,84 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        iPad */
+    @media only screen and (max-width: 769px) {
+        header {
+            div {
+                form {
+                    font-size: 1rem;
+
+                    #id_search_term {
+                        width: 340px;
+                    }
+
+                    #search-glass {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                padding: 1rem;
+                grid-gap: 1rem;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    padding: 1rem;
+                    font-size: 0.9rem;
+                    min-height: 370px;
+                    max-height: 370px;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                #description-card {
+                    width: 690px;
+
+                    h1 {
+                        font-size: 1rem;
+                    }
+                }
+
+                #img {
+                    width: 150px;
+                    height: 90px;
+                }
+
+                .img2 {
+                    height: 40px;
+                    width: 40px;
+                }
+
+                #country-name {
+                    font-size: 12px;
+                }
+
+                #no-results h1 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                padding: 1rem;
+                font-size: 0.8rem;
+
+                #logo {
+                    width: 20px;
+                }
+            }
+        }
+    }
 }
