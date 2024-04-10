@@ -666,4 +666,35 @@ body {
             }
         }
     }
+
+    @media only screen and (max-width: 570px) {
+        header {
+            div {
+                form {
+                    #id_search_term {
+                        width: 280px;
+                        margin-right: 0;
+                        margin-left: -20px;
+                    }
+
+                    .search-dropdown {
+                        width: 340px;
+                        margin-left: -314px;
+                    }
+
+                    #id_regions {
+                        margin-right: -20px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                #description-card {
+                    width: 536px;
+                }
+            }
+        }
+    }
 }
