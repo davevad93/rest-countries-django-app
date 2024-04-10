@@ -394,4 +394,62 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Asus Zenbook Fold,
+        iPad Air,
+        Kindle Fire HDX,
+        Nexus 10,
+        Surface Pro 7 */
+    @media only screen and (max-width: 993px) {
+        header {
+            div {
+                h1 {
+                    display: none;
+                }
+
+                form {
+                    #id_search_term {
+                        width: 340px;
+                        margin-left: 0;
+                    }
+
+                    .search-dropdown {
+                        width: 340px;
+                        margin-left: -428px;
+                    }
+
+                    #search-glass {
+                        display: none;
+                    }
+
+                    #id_regions {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+                #description-card {
+                    width: 672px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 993px) {
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+                #description-card {
+                    width: 912px;
+                }
+            }
+        }
+    }
 }
