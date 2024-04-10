@@ -586,4 +586,56 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Galaxy Tab S4,
+        Microsoft Lumia 550 */
+    @media only screen and (max-width: 712px) {
+        header {
+            div {
+                form {
+                    #id_search_term {
+                        width: 300px;
+                        margin-left: -15px;
+                    }
+
+                    .search-dropdown {
+                        width: 340px;
+                        margin-left: -388px;
+                    }
+
+                    #id_regions {
+                        margin-right: -15px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.9rem;
+                    min-height: 360px;
+                    max-height: 360px;
+                }
+
+                #description-card {
+                    width: 510px;
+                }
+
+                #img {
+                    width: 130px;
+                    height: 80px;
+                }
+
+                .img2 {
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+        }
+    }
 }
