@@ -638,4 +638,32 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Blackberry Playbook,
+        Nexus 7 */
+    @media only screen and (max-width: 600px) {
+        header {
+            div {
+                form {
+                    #id_regions {
+                        width: 100px;
+                        margin-left: -30px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    min-height: 340px;
+                    max-height: 340px;
+                }
+            }
+        }
+    }
 }
