@@ -559,4 +559,31 @@ body {
             }
         }
     }
+
+    @media only screen and (max-width: 740px) {
+        header {
+            div {
+                form {
+                    #id_search_term {
+                        width: 320px;
+                    }
+
+                    .search-dropdown {
+                        width: 340px;
+                        margin-left: -409px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+                #description-card {
+                    width: 508px;
+                }
+            }
+        }
+    }
 }
