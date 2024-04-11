@@ -750,4 +750,72 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Nokia N9 */
+    @media only screen and (max-width: 480px) {
+        main {
+            #country-container {
+                padding: 0.5rem;
+                grid-gap: 0.5rem;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    padding: 0.5rem;
+                    font-size: 0.7rem;
+                    min-height: 300px;
+                    max-height: 300px;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                #description-card {
+                    width: 464px;
+
+                    h1 {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                #img {
+                    width: 100px;
+                    height: 60px;
+                }
+
+                .img2 {
+                    height: 30px;
+                    width: 30px;
+                }
+
+                #country-name {
+                    font-size: 10px;
+                }
+
+                #no-results h1 {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                font-size: 0.7rem;
+
+                #logo {
+                    width: 15px;
+                    margin-left: 2rem;
+                }
+
+                #django {
+                    width: 90px;
+                }
+            }
+        }
+    }
 }
