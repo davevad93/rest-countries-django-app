@@ -697,4 +697,47 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Surface Duo */
+    @media only screen and (max-width: 540px) {
+        header {
+            div {
+                form {
+                    font-size: 15px;
+                    width: 60px;
+
+                    #id_search_term {
+                        height: 32px;
+                        width: 280px;
+                        margin-left: -15px;
+                    }
+
+                    .search-dropdown {
+                        width: 320px;
+                        margin-left: -258px;
+                    }
+
+                    #id_regions {
+                        margin-left: -20px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.8rem;
+                }
+
+                #description-card {
+                    width: 510px;
+                }
+            }
+        }
+    }
 }
