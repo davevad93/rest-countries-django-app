@@ -818,4 +818,41 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        iPhone 12/13 Pro Max,
+        iPhone 14 Pro Max */
+    @media only screen and (max-width: 432px) {
+        header {
+            div {
+                form {
+                    font-size: 0.8rem;
+
+                    #id_search_term {
+                        height: 30px;
+                        width: 240px;
+                        margin-left: -25px;
+                    }
+
+                    .search-dropdown {
+                        width: 300px;
+                        margin-left: -231px;
+                    }
+
+                    #id_regions {
+                        width: 100px;
+                        margin-left: -30px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                #description-card {
+                    width: 414px;
+                }
+            }
+        }
+    }
 }
