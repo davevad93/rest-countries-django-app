@@ -877,4 +877,63 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Facebook on Android,
+        Moto G Power,
+        Nexus 5X,
+        Nexus 6,
+        Nexus 6P,
+        Pixel 2,
+        Pixel 2 XL,
+        Pixel 7,
+        Samsung Galaxy A51/71 */
+    @media only screen and (max-width: 412px) {
+        header {
+            div {
+                form {
+                    font-size: 0.7rem;
+
+                    #id_search_term {
+                        height: 30px;
+                        width: 200px;
+                        margin-left: -25px;
+                    }
+
+                    .search-dropdown {
+                        width: 250px;
+                        margin-left: -209px;
+                    }
+
+                    #id_regions {
+                        width: 100px;
+                        margin-left: -30px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                padding: 0.5rem;
+                grid-gap: 0.5rem;
+                font-size: 0.6rem;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                #description-card {
+                    width: 394px;
+                }
+
+                #img {
+                    width: 100px;
+                    height: 60px;
+                }
+
+                .img2 {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
 }
