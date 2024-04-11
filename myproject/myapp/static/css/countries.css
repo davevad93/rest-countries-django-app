@@ -740,4 +740,14 @@ body {
             }
         }
     }
+
+    @media only screen and (max-width: 534px) {
+        main {
+            #country-container {
+                #description-card {
+                    width: 503px;
+                }
+            }
+        }
+    }
 }
