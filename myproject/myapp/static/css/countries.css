@@ -855,4 +855,26 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        iPhone 6/7/8 Plus,
+        iPhone 11 Pro Max,
+        iPhone XR,
+        iPhone XS Max */
+    @media only screen and (max-width: 416px) {
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.7rem;
+                }
+
+                #description-card {
+                    width: 399px;
+                }
+            }
+        }
+    }
 }
