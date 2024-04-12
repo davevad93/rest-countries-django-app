@@ -1048,4 +1048,87 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Galaxy S9+,
+        iPhone 4,
+        iPhone 5/SE, 
+        Nokia Lumia 520 */
+    @media only screen and (max-width: 320px) {
+        header {
+            div {
+                form {
+                    font-size: 0.6rem;
+
+                    #id_search_term {
+                        height: 30px;
+                    }
+
+                    .search-dropdown {
+                        width: 230px;
+                        margin-left: -186px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.6rem;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                #description-card {
+                    width: 302px;
+
+                    h1 {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                #img {
+                    width: 80px;
+                    height: 50px;
+                }
+
+                .img2 {
+                    height: 20px;
+                    width: 20px;
+                }
+
+                #country-name {
+                    font-size: 8px;
+                }
+
+                #no-results h1 {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                height: 15vh;
+                font-size: 0.5rem;
+
+                #logo {
+                    width: 10px;
+                }
+
+                #django {
+                    width: 80px;
+                }
+            }
+        }
+    }
 }
