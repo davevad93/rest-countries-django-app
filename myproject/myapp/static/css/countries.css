@@ -936,4 +936,19 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Pixel 3,
+        Pixel 3 XL,
+        iPhone 12/13,
+        iPhone 12/13 Pro */
+    @media only screen and (max-width: 394px) {
+        main {
+            #country-container {
+                #description-card {
+                    width: 378px;
+                }
+            }
+        }
+    }
 }
