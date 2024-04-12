@@ -951,4 +951,50 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        LG Optimus L70,
+        Nexus 4 */
+    @media only screen and (max-width: 384px) {
+        header {
+            div {
+                form {
+                    font-size: 0.8rem;
+
+                    .search-dropdown {
+                        width: 280px;
+                        margin-left: -230px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    padding: 0.5rem;
+                    min-height: 275px;
+                    max-height: 275px;
+                }
+
+                #description-card {
+                    width: 368px;
+                }
+
+                #img {
+                    width: 100px;
+                    height: 60px;
+                }
+
+                .img2 {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
 }
