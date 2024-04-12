@@ -1036,4 +1036,16 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Pixel 4 */
+    @media only screen and (max-width: 354px) {
+        main {
+            #country-container {
+                #description-card {
+                    width: 338px;
+                }
+            }
+        }
+    }
 }
