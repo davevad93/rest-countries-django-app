@@ -1012,4 +1012,28 @@ body {
             }
         }
     }
+
+    /*Adjusted for: 
+        BlackBerry Z30,
+        Galaxy Note 3,
+        Galaxy Note II,
+        Galaxy S III,
+        Galaxy S5, 
+        Galaxy S8,
+        iPhone 6/7/8, 
+        Microsoft Lumia 950 , 
+        Moto G4, 
+        Nexus 5, 
+        Samsung Galaxy S8+ */
+    @media only screen and (max-width: 360px) {
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                #description-card {
+                    width: 346px;
+                }
+            }
+        }
+    }
 }
