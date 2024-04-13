@@ -1174,4 +1174,89 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        JioPhone 2 */
+    @media only screen and (max-width: 240px) {
+        header {
+            div {
+                form {
+                    font-size: 0.45rem;
+
+                    #id_search_term {
+                        height: 30px;
+                        width: 120px;
+                        margin-left: -25px;
+                    }
+
+                    .search-dropdown {
+                        width: 180px;
+                        margin-left: -150px;
+                    }
+
+                    #id_regions {
+                        margin-left: -10px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.45rem;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 0.6rem;
+                    }
+                }
+
+                #description-card {
+                    width: 222px;
+
+                    h1 {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                #img {
+                    width: 60px;
+                    height: 40px;
+                }
+
+                .img2 {
+                    height: 15px;
+                    width: 15px;
+                }
+
+                #country-name {
+                    font-size: 6px;
+                }
+
+                #no-results h1 {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                font-size: 0.4rem;
+
+                #logo {
+                    width: 9px;
+                }
+
+                #django {
+                    width: 60px;
+                }
+            }
+        }
+    }
 }
