@@ -1131,4 +1131,47 @@ body {
             }
         }
     }
+
+    /* Adjusted for:
+        Galaxy Fold */
+    @media only screen and (max-width: 280px) {
+        header {
+            div {
+                form {
+                    font-size: 0.55rem;
+
+                    #id_search_term {
+                        width: 140px;
+                    }
+
+                    .search-dropdown {
+                        width: 200px;
+                        margin-left: -172px;
+                    }
+
+                    #id_regions {
+                        width: 85px;
+                        margin-left: -15px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.55rem;
+                    min-height: 240px;
+                    max-height: 240px;
+                }
+
+                #description-card {
+                    width: 262px;
+                }
+            }
+        }
+    }
 }
