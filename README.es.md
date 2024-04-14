@@ -57,14 +57,49 @@ Si no tienes Python instalado entra en https://www.python.org/downloads/ y desca
     python -m pip install -r requirements.txt # Unix/macOS
 ```
 
-7. Pon en marcha el servidor web de desarrollo:
+7. Genera una clave secreta aleatoria y guárdala en el archivo .env: <br/>
+ (Esta aplicación no utiliza un sistema de autenticación y no almacena datos sensibles, sin embargo la mejor práctica es crear una clave secreta y almacenarla en una variable de entorno). 
+
+```bash
+    # PASO 1: Abre el Shell de Python en el terminal.
+
+    py manage.py shell # Windows
+    python manage.py shell # Unix/macOS
+```
+
+```bash
+    # PASO 2: Importa la función get_random_secret_key().
+
+    from django.core.management.utils import get_random_secret_key
+```
+
+```bash
+    # PASO 3: Genera la clave secreta con la función get_random_secret_key().
+
+    print(get_random_secret_key())
+    # Copia la clave.
+```
+
+```bash
+    # PASO 4: Cierra el Shell de Python.
+
+    exit()
+```
+
+```bash
+    # PASO 5: Crea el archivo .env con la variable de entorno "SECRET KEY" y copia la clave generada en el PASO 3. 
+
+    echo SECRET_KEY = 'Copia aquí la clave generada en el PASO 3' > .env
+```
+
+8. Pon en marcha el servidor web de desarrollo:
 
 ```bash
     py manage.py runserver # Windows
     python manage.py runserver # Unix/macOS
 ```
 
-8. Accede a la aplicación a través de tu browser web en `http://localhost:8000`.
+9. Accede a la aplicación a través de tu browser web en `http://localhost:8000`.
 
 ![Homepage](screenshots//homepage.JPG)
 
