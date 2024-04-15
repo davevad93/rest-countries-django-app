@@ -21,7 +21,7 @@
             <h1>Countries of the World</h1>
             <form method="get" action="{% url 'search_countries' %}" class="form-inline" id="search-form">
                 {{ search_form.search_term }}
-                <button type="submit" id="search-glass">
+                <button type="submit" id="search-glass" aria-label="Search">
                     <i class="fa fa-search"></i>
                 </button>
                 <ul>
