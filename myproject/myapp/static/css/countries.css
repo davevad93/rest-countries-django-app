@@ -2,10 +2,10 @@ html,
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #E5E4E2;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    box-sizing: border-box;    
 
     header {
         div {
@@ -41,9 +41,9 @@ body {
             #id_regions,
             #back-button,
             #back-button:after {
-                border-radius: 10px;
                 -moz-border-radius: 10px;
                 -webkit-border-radius: 10px;
+                border-radius: 10px;                
             }
 
             #id_search_term {
