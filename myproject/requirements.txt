@@ -4,8 +4,6 @@ certifi==2024.2.2
 charset-normalizer==3.3.2
 Django==5.0.3
 django-bootstrap5==23.4
-django-fontawesome-5==1.0.18
-django-static-jquery3==5.3.7.1
 idna==3.6
 python-dotenv==1.0.1
 pyuca==1.2
