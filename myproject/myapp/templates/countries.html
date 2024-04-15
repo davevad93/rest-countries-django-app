@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 {% load custom_filters %}
 {% load django_bootstrap5 %}
-{% load fontawesome_5 %}
 {% load static %}
 <html lang="en">
 
@@ -10,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REST Countries Info APP</title>
     {% bootstrap_css %}
-    {% fontawesome_5_static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/countries.css'%}">
     <script src="{% static 'js/countries.js' %}"></script>
     <link rel="icon" href="{% static 'img/favicon.ico' %}">
