@@ -89,7 +89,7 @@ Si no tienes Python instalado entra en https://www.python.org/downloads/ y desca
 ```bash
     # PASO 5: Crea el archivo .env con la variable de entorno "SECRET KEY" y copia la clave generada en el PASO 3. 
 
-    echo SECRET_KEY = 'Copia aquí la clave generada en el PASO 3' > .env
+    echo SECRET_KEY = 'Pega aquí la clave generada en el PASO 3' > .env
 ```
 
 8. Pon en marcha el servidor web de desarrollo:
