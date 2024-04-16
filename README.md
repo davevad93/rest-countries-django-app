@@ -89,7 +89,7 @@ If you don't have Python installed go to https://www.python.org/downloads/ and d
 ```bash
     # STEP 5: Create .env file with the "SECRET_KEY" environment variable and paste the generated key in STEP 3. 
 
-    echo SECRET_KEY = 'Paste here the generated key in STEP 3' > .env
+    echo SECRET_KEY = 'Paste here the key generated in STEP 3' > .env
 ```
 
 8. Run the development server:
