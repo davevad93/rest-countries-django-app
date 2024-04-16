@@ -22,7 +22,7 @@ If you don't have Python installed go to https://www.python.org/downloads/ and d
 1. Clone the repository:
 
 ```bash
-    git clone https://github.com/DavidePresti/rest-countries-django-app.git
+    git clone https://github.com/davevad93/rest-countries-django-app.git
 ```
 
 2. Go to the repo directory:
