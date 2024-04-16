@@ -21,4 +21,5 @@ class RegionFilterForm(forms.Form):
             ('Oceania', 'Oceania'),
         ),
         required=False,
+        widget=forms.Select(attrs={'aria-label': 'Select region'}),
     )
