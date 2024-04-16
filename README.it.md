@@ -22,7 +22,7 @@ Se non hai Python installato visita https://www.python.org/downloads/ e scarica 
 1. Clona la repository:
 
 ```bash
-    git clone https://github.com/DavidePresti/rest-countries-django-app.git
+    git clone https://github.com/davevad93/rest-countries-django-app.git
 ```
 
 2. Entra nella cartella della repository:
@@ -57,14 +57,49 @@ Se non hai Python installato visita https://www.python.org/downloads/ e scarica 
     python -m pip install -r requirements.txt # Unix/macOS
 ```
 
-7. Avvia il server di sviluppo:
+7. Genera una chiave segreta casuale e salvala in un file .env: <br/>
+ (Questa app non utilizza un metodo di autenticazione e non immagazzina dati sensibili, ma in ogni caso è sempre meglio creare una chiave segreta e salvarla in una variabile d'ambiente).
+
+```bash
+    # PASSO 1: Apri la Shell di Python nel terminale.
+
+    py manage.py shell # Windows
+    python manage.py shell # Unix/macOS
+```
+
+```bash
+    # PASSO 2: Importa la funzione get_random_secret_key().
+
+    from django.core.management.utils import get_random_secret_key
+```
+
+```bash
+    # PASSO 3: Genera la chiave segreta con la funzione get_random_secret_key().
+
+    print(get_random_secret_key())
+    # Copia la chiave.
+```
+
+```bash
+    # PASSO 4: Chiudi la Shell di Python.
+
+    exit()
+```
+
+```bash
+    # PASSO 5: Crea il file .env con la variabile d'ambiente "SECRET KEY" e copia la chiave generata nel PASSO 3. 
+
+    echo SECRET_KEY = 'Incolla la chiave generata nel PASSO 3' > .env
+```
+
+8. Avvia il server di sviluppo:
 
 ```bash
     py manage.py runserver # Windows
     python manage.py runserver # Unix/macOS
 ```
 
-8. Accedi all'applicazione con il tuo browser web visitando `http://localhost:8000`.
+9. Accedi all'applicazione con il tuo browser web visitando `http://localhost:8000`.
 
 ![Homepage](screenshots//homepage.JPG)
 

@@ -2,10 +2,10 @@ html,
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #E5E4E2;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    box-sizing: border-box;    
 
     header {
         div {
@@ -41,9 +41,9 @@ body {
             #id_regions,
             #back-button,
             #back-button:after {
-                border-radius: 10px;
                 -moz-border-radius: 10px;
                 -webkit-border-radius: 10px;
+                border-radius: 10px;                
             }
 
             #id_search_term {
@@ -115,6 +115,7 @@ body {
                 z-index: 1;
                 top: 9.5vh;
                 width: 400px;
+                margin-left: -488px;
                 border-radius: 10px;
                 box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                 display: none;
@@ -279,9 +280,982 @@ body {
                 opacity: 1;
             }
 
+            p {
+                margin-top: 1rem;
+            }
+
             #logo {
                 width: 25px;
                 margin-right: 2rem;
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Laptop with MDPI screen,
+        Laptop with touch */
+    @media only screen and (min-width: 1025px) and (max-width: 1368px) {
+        header {
+            div {
+                .search-dropdown {
+                    margin-left: -487px;
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    }
+
+    /* Adjusted for:
+        iPad Pro,
+        Nest Hub */
+    @media only screen and (max-width: 1024px) {
+        header {
+            div {
+                h1 {
+                    font-size: 1.2rem;
+                }
+
+                form {
+                    #id_search_term {
+                        margin-left: 100px;
+                    }
+
+                    #search-glass {
+                        margin-left: 470px;
+                    }
+
+                    #id_regions {
+                        width: 110px;
+                        margin-right: 150px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                padding: 1.5rem;
+                grid-gap: 1.5rem;
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    min-height: 430px;
+                    max-height: 430px;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 1rem;
+                    }
+                }
+
+                #description-card {
+                    width: 912px;
+
+                    h1 {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                #img {
+                    width: 200px;
+                    height: 120px;
+                }
+
+                .img2 {
+                    height: 50px;
+                    width: 50px;
+                }
+
+                #country-name {
+                    font-size: 15px;
+                }
+
+                #no-results h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                padding: 1.5rem;
+                font-size: 0.9rem;
+
+                #logo {
+                    width: 25px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Asus Zenbook Fold,
+        iPad Air,
+        Kindle Fire HDX,
+        Nexus 10,
+        Surface Pro 7 */
+    @media only screen and (max-width: 993px) {
+        header {
+            div {
+                h1 {
+                    display: none;
+                }
+
+                form {
+                    #id_search_term {
+                        width: 340px;
+                        margin-left: 0;
+                    }
+
+                    .search-dropdown {
+                        width: 340px;
+                        margin-left: -428px;
+                    }
+
+                    #search-glass {
+                        display: none;
+                    }
+
+                    #id_regions {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+                #description-card {
+                    width: 672px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 993px) {
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+                #description-card {
+                    width: 912px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        iPad */
+    @media only screen and (max-width: 769px) {
+        header {
+            div {
+                form {
+                    font-size: 1rem;
+
+                    #id_search_term {
+                        width: 340px;
+                    }
+
+                    #search-glass {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                padding: 1rem;
+                grid-gap: 1rem;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    padding: 1rem;
+                    font-size: 0.9rem;
+                    min-height: 370px;
+                    max-height: 370px;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                #description-card {
+                    width: 690px;
+
+                    h1 {
+                        font-size: 1rem;
+                    }
+                }
+
+                #img {
+                    width: 150px;
+                    height: 90px;
+                }
+
+                .img2 {
+                    height: 40px;
+                    width: 40px;
+                }
+
+                #country-name {
+                    font-size: 12px;
+                }
+
+                #no-results h1 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                padding: 1rem;
+                font-size: 0.8rem;
+
+                #logo {
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 746px) {
+        header {
+            div {
+                form {
+                    #id_search_term {
+                        width: 320px;
+                    }
+
+                    .search-dropdown {
+                        width: 340px;
+                        margin-left: -409px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+                #description-card {
+                    width: 508px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 740px) {
+        header {
+            div {
+                form {
+                    #id_search_term {
+                        width: 320px;
+                    }
+
+                    .search-dropdown {
+                        width: 340px;
+                        margin-left: -409px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+                #description-card {
+                    width: 508px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Galaxy Tab S4,
+        Microsoft Lumia 550 */
+    @media only screen and (max-width: 712px) {
+        header {
+            div {
+                form {
+                    #id_search_term {
+                        width: 300px;
+                        margin-left: -15px;
+                    }
+
+                    .search-dropdown {
+                        width: 340px;
+                        margin-left: -388px;
+                    }
+
+                    #id_regions {
+                        margin-right: -15px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.9rem;
+                    min-height: 360px;
+                    max-height: 360px;
+                }
+
+                #description-card {
+                    width: 510px;
+                }
+
+                #img {
+                    width: 130px;
+                    height: 80px;
+                }
+
+                .img2 {
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Blackberry Playbook,
+        Nexus 7 */
+    @media only screen and (max-width: 600px) {
+        header {
+            div {
+                form {
+                    #id_regions {
+                        width: 100px;
+                        margin-left: -30px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    min-height: 340px;
+                    max-height: 340px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 570px) {
+        header {
+            div {
+                form {
+                    #id_search_term {
+                        width: 280px;
+                        margin-right: 0;
+                        margin-left: -20px;
+                    }
+
+                    .search-dropdown {
+                        width: 340px;
+                        margin-left: -314px;
+                    }
+
+                    #id_regions {
+                        margin-right: -20px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                #description-card {
+                    width: 536px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Surface Duo */
+    @media only screen and (max-width: 540px) {
+        header {
+            div {
+                form {
+                    font-size: 15px;
+                    width: 60px;
+
+                    #id_search_term {
+                        height: 32px;
+                        width: 280px;
+                        margin-left: -15px;
+                    }
+
+                    .search-dropdown {
+                        width: 320px;
+                        margin-left: -258px;
+                    }
+
+                    #id_regions {
+                        margin-left: -20px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.8rem;
+                }
+
+                #description-card {
+                    width: 510px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 534px) {
+        main {
+            #country-container {
+                #description-card {
+                    width: 503px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Nokia N9 */
+    @media only screen and (max-width: 480px) {
+        main {
+            #country-container {
+                padding: 0.5rem;
+                grid-gap: 0.5rem;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    padding: 0.5rem;
+                    font-size: 0.7rem;
+                    min-height: 300px;
+                    max-height: 300px;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                #description-card {
+                    width: 464px;
+
+                    h1 {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                #img {
+                    width: 100px;
+                    height: 60px;
+                }
+
+                .img2 {
+                    height: 30px;
+                    width: 30px;
+                }
+
+                #country-name {
+                    font-size: 10px;
+                }
+
+                #no-results h1 {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                font-size: 0.7rem;
+
+                #logo {
+                    width: 15px;
+                    margin-left: 2rem;
+                }
+
+                #django {
+                    width: 90px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        iPhone 12/13 Pro Max,
+        iPhone 14 Pro Max */
+    @media only screen and (max-width: 432px) {
+        header {
+            div {
+                form {
+                    font-size: 0.8rem;
+
+                    #id_search_term {
+                        height: 30px;
+                        width: 240px;
+                        margin-left: -25px;
+                    }
+
+                    .search-dropdown {
+                        width: 300px;
+                        margin-left: -231px;
+                    }
+
+                    #id_regions {
+                        width: 100px;
+                        margin-left: -30px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                #description-card {
+                    width: 414px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        iPhone 6/7/8 Plus,
+        iPhone 11 Pro Max,
+        iPhone XR,
+        iPhone XS Max */
+    @media only screen and (max-width: 416px) {
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.7rem;
+                }
+
+                #description-card {
+                    width: 399px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Facebook on Android,
+        Moto G Power,
+        Nexus 5X,
+        Nexus 6,
+        Nexus 6P,
+        Pixel 2,
+        Pixel 2 XL,
+        Pixel 7,
+        Samsung Galaxy A51/71 */
+    @media only screen and (max-width: 412px) {
+        header {
+            div {
+                form {
+                    font-size: 0.7rem;
+
+                    #id_search_term {
+                        height: 30px;
+                        width: 200px;
+                        margin-left: -25px;
+                    }
+
+                    .search-dropdown {
+                        width: 250px;
+                        margin-left: -209px;
+                    }
+
+                    #id_regions {
+                        width: 100px;
+                        margin-left: -30px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                padding: 0.5rem;
+                grid-gap: 0.5rem;
+                font-size: 0.6rem;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                #description-card {
+                    width: 394px;
+                }
+
+                #img {
+                    width: 100px;
+                    height: 60px;
+                }
+
+                .img2 {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Pixel 3,
+        Pixel 3 XL,
+        iPhone 12/13,
+        iPhone 12/13 Pro */
+    @media only screen and (max-width: 394px) {
+        main {
+            #country-container {
+                #description-card {
+                    width: 378px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        LG Optimus L70,
+        Nexus 4 */
+    @media only screen and (max-width: 384px) {
+        header {
+            div {
+                form {
+                    font-size: 0.8rem;
+
+                    .search-dropdown {
+                        width: 280px;
+                        margin-left: -230px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    padding: 0.5rem;
+                    min-height: 275px;
+                    max-height: 275px;
+                }
+
+                #description-card {
+                    width: 368px;
+                }
+
+                #img {
+                    width: 100px;
+                    height: 60px;
+                }
+
+                .img2 {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        iPhone 11,
+        iPhone 12/13 Mini,
+        iPhone SE,
+        iPhone X/XS */
+    @media only screen and (max-width: 376px) {
+        main {
+            #country-container {
+                #description-card {
+                    width: 359px;
+                }
+            }
+        }
+    }
+
+    /*Adjusted for: 
+        BlackBerry Z30,
+        Galaxy Note 3,
+        Galaxy Note II,
+        Galaxy S III,
+        Galaxy S5, 
+        Galaxy S8,
+        iPhone 6/7/8, 
+        Microsoft Lumia 950 , 
+        Moto G4, 
+        Nexus 5, 
+        Samsung Galaxy S8+ */
+    @media only screen and (max-width: 360px) {
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                #description-card {
+                    width: 346px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Pixel 4 */
+    @media only screen and (max-width: 354px) {
+        main {
+            #country-container {
+                #description-card {
+                    width: 338px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Galaxy S9+,
+        iPhone 4,
+        iPhone 5/SE, 
+        Nokia Lumia 520 */
+    @media only screen and (max-width: 320px) {
+        header {
+            div {
+                form {
+                    font-size: 0.6rem;
+
+                    #id_search_term {
+                        height: 30px;
+                    }
+
+                    .search-dropdown {
+                        width: 230px;
+                        margin-left: -186px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.6rem;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                #description-card {
+                    width: 302px;
+
+                    h1 {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                #img {
+                    width: 80px;
+                    height: 50px;
+                }
+
+                .img2 {
+                    height: 20px;
+                    width: 20px;
+                }
+
+                #country-name {
+                    font-size: 8px;
+                }
+
+                #no-results h1 {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                height: 15vh;
+                font-size: 0.5rem;
+
+                #logo {
+                    width: 10px;
+                }
+
+                #django {
+                    width: 80px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        Galaxy Fold */
+    @media only screen and (max-width: 280px) {
+        header {
+            div {
+                form {
+                    font-size: 0.55rem;
+
+                    #id_search_term {
+                        width: 140px;
+                    }
+
+                    .search-dropdown {
+                        width: 200px;
+                        margin-left: -172px;
+                    }
+
+                    #id_regions {
+                        width: 85px;
+                        margin-left: -15px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.55rem;
+                    min-height: 240px;
+                    max-height: 240px;
+                }
+
+                #description-card {
+                    width: 262px;
+                }
+            }
+        }
+    }
+
+    /* Adjusted for:
+        JioPhone 2 */
+    @media only screen and (max-width: 240px) {
+        header {
+            div {
+                form {
+                    font-size: 0.45rem;
+
+                    #id_search_term {
+                        height: 30px;
+                        width: 120px;
+                        margin-left: -25px;
+                    }
+
+                    .search-dropdown {
+                        width: 180px;
+                        margin-left: -150px;
+                    }
+
+                    #id_regions {
+                        margin-left: -10px;
+                    }
+                }
+            }
+        }
+
+        main {
+            #country-container {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+                #country-card,
+                #description-card,
+                .emblem-card {
+                    font-size: 0.45rem;
+                }
+
+                #country-card {
+                    h1 {
+                        font-size: 0.6rem;
+                    }
+                }
+
+                #description-card {
+                    width: 222px;
+
+                    h1 {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                #img {
+                    width: 60px;
+                    height: 40px;
+                }
+
+                .img2 {
+                    height: 15px;
+                    width: 15px;
+                }
+
+                #country-name {
+                    font-size: 6px;
+                }
+
+                #no-results h1 {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        footer {
+            div {
+                font-size: 0.4rem;
+
+                #logo {
+                    width: 9px;
+                }
+
+                #django {
+                    width: 60px;
+                }
             }
         }
     }
