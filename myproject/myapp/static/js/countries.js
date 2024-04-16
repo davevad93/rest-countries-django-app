@@ -193,5 +193,7 @@ class RegionSelect {
 // Initialize the CountrySearch and RegionSelect classes when DOM content is loaded
 document.addEventListener("DOMContentLoaded", function () {
     const countrySearch = new CountrySearch(); // Initialize CountrySearch
-    new RegionSelect(countrySearch); // Initialize RegionSelect with CountrySearch instance
+    if (countrySearch) {
+        return new RegionSelect(countrySearch); // Initialize RegionSelect with CountrySearch instance
+    }
 });

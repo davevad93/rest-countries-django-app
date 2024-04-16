@@ -12,7 +12,7 @@ class CountrySearchForm(forms.Form):
 class RegionFilterForm(forms.Form):
     regions = forms.ChoiceField(
         choices=(
-            ('All', 'All regions'),
+            ('All', 'All'),
             ('Africa', 'Africa'),
             ('Americas', 'Americas'),
             ('Antarctic', 'Antarctic'),
@@ -21,4 +21,5 @@ class RegionFilterForm(forms.Form):
             ('Oceania', 'Oceania'),
         ),
         required=False,
+        widget=forms.Select(attrs={'aria-label': 'Select region'}),
     )

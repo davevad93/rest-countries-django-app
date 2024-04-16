@@ -61,4 +61,166 @@ body {
             }
         }
     }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width: 1200px) {
+        main {
+            div {
+                padding: 8rem;
+
+                h1 {
+                    font-size: 1.9rem;
+                }
+
+                h2 {
+                    font-size: 1.1rem;
+                }
+
+                button {
+                    height: 35px;
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    /* Large tablets */
+    @media only screen and (max-width: 900px) {
+        main {
+            div {
+                padding: 7rem;
+
+                h1 {
+                    font-size: 1.8rem;
+                }
+
+                h2 {
+                    font-size: 1rem;
+                }
+
+                button {
+                    height: 35px;
+                    padding: 0.5rem;
+                    font-size: 0.9rem;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    /* Mid-size tablets */
+    @media only screen and (max-width: 768px) {
+        main {
+            div {
+                padding: 5rem;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                h2 {
+                    font-size: 1rem;
+                }
+
+                button {
+                    height: 30px;
+                    padding: 0.5rem;
+                    font-size: 0.8rem;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    /* Small tablets */
+    @media only screen and (max-width: 600px) {
+        main {
+            div {
+                padding: 3rem;
+
+                h1 {
+                    font-size: 1.3rem;
+                }
+
+                h2 {
+                    font-size: 0.9rem;
+                }
+
+                button {
+                    height: 25px;
+                    padding: 0.5rem;
+                    font-size: 0.7rem;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width: 480px) {
+        main {
+            div {
+                padding: 2rem;
+
+                h1 {
+                    font-size: 1.2rem;
+                }
+
+                h2 {
+                    font-size: 0.8rem;
+                }
+
+                button {
+                    height: 25px;
+                    padding: 0.5rem;
+                    font-size: 0.7rem;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+
+    /* Mobile Phones */
+    @media only screen and (max-width: 320px) {
+        main {
+            div {
+                padding: 1rem;
+
+                h1 {
+                    font-size: 1rem;
+                }
+
+                h2 {
+                    font-size: 0.7rem;
+                }
+
+                button {
+                    height: 20px;
+                    padding: 0.5rem;
+                    font-size: 0.6rem;
+                }
+
+                p {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
 }
