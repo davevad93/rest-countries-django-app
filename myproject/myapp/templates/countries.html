@@ -84,7 +84,7 @@
                 {% endwith %}
                 {% endif %}
                 {% if search_form.search_term.value %}
-                <p>Currencies:
+                <p>Currency:
                     {% if country.currencies %}
                     {% for currency_code, currency_info in country.currencies.items %}
                     {{ currency_info.name }}{% if not forloop.last %},{% endif %}
