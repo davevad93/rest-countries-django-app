@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load i18n %}
 {% load django_bootstrap5 %}
 {% load static %}
 <html lang="en">
@@ -13,13 +14,34 @@
 <body">
     <main>
         <div>
-            <h1>Welcome to the REST Countries Info APP</h1>
-            <h2>Click on the button below to start.</h2>
+            <h1>{% trans "Welcome to the REST Countries Info APP" %}</h1>
+            <h2>{% trans "Click on the button below to start." %}</h2>
             <button type="button" id="enter-button" class="btn btn-primary"
-                onclick="window.location.href='/countries'">Enter</button>
+                onclick="window.location.href='/countries'">{% trans "Enter" %}</button>
             <p>© 2024 | Davide Presti</p>
+
+            <form id="language-form" action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                <select id="language-select" name="language">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
         </div>
     </main>
-    </body>
+
+    <script>
+        var LANGUAGE_CODE = "{{ LANGUAGE_CODE }}";
+    </script>
+
+    <script src="{% static 'js/languages.js' %}"></script>
+</body>
 
 </html>
