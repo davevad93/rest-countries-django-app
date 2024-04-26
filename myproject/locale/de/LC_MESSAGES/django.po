@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-20 01:52+0200\n"
+"POT-Creation-Date: 2024-04-20 22:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,132 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\myapp\templates\countries.html:22
+#: .\myapp\forms.py:9
+msgid "Search a country..."
+msgstr "Suche ein Land..."
+
+#: .\myapp\forms.py:16
+msgid "All"
+msgstr "Alles"
+
+#: .\myapp\forms.py:17
+msgid "Africa"
+msgstr "Afrika"
+
+#: .\myapp\forms.py:18
+msgid "Americas"
+msgstr "Amerikas"
+
+#: .\myapp\forms.py:19
+msgid "Antarctic"
+msgstr "Antarktis"
+
+#: .\myapp\forms.py:20
+msgid "Asia"
+msgstr "Asien"
+
+#: .\myapp\forms.py:21
+msgid "Europe"
+msgstr "Europa"
+
+#: .\myapp\forms.py:22
+msgid "Oceania"
+msgstr "Ozeanien"
+
+#: .\myapp\forms.py:25
+msgid "Select region"
+msgstr "Region auswählen"
+
+#: .\myapp\templates\countries.html:11
+#, fuzzy
+#| msgid "Welcome to the REST Countries Info APP"
+msgid "REST Countries Info APP"
+msgstr "Willkommen bei der REST Countries Info APP"
+
+#: .\myapp\templates\countries.html:23
 msgid "Countries of the World"
 msgstr "Länder der Welt&#8193;&#8193;&#8193;&#160;"
+
+#: .\myapp\templates\countries.html:26
+msgid "Search"
+msgstr "Suche"
+
+#: .\myapp\templates\countries.html:41
+msgid "Back"
+msgstr "Zurück"
+
+#: .\myapp\templates\countries.html:49
+msgid "flag"
+msgstr "flagge"
+
+#: .\myapp\templates\countries.html:51
+msgid "Capital"
+msgstr "Kapital"
+
+#: .\myapp\templates\countries.html:55 .\myapp\templates\countries.html:62
+#: .\myapp\templates\countries.html:69 .\myapp\templates\countries.html:76
+#: .\myapp\templates\countries.html:96 .\myapp\templates\countries.html:105
+#: .\myapp\templates\countries.html:114 .\myapp\templates\countries.html:121
+#: .\myapp\templates\countries.html:130 .\myapp\templates\countries.html:137
+msgid "N/A"
+msgstr "K.A."
+
+#: .\myapp\templates\countries.html:58
+msgid "Population"
+msgstr "Bevölkerung"
+
+#: .\myapp\templates\countries.html:65
+msgid "Region"
+msgstr "Region"
+
+#: .\myapp\templates\countries.html:72
+msgid "Subregion"
+msgstr "Unterregion"
+
+#: .\myapp\templates\countries.html:82 .\myapp\templates\countries.html:84
+#: .\myapp\templates\countries.html:146 .\myapp\templates\countries.html:150
+msgid "emblem"
+msgstr "emblem"
+
+#: .\myapp\templates\countries.html:90
+msgid "Currency"
+msgstr "Währung"
+
+#: .\myapp\templates\countries.html:99
+msgid "Language"
+msgstr "Sprache"
+
+#: .\myapp\templates\countries.html:108
+msgid "Borders"
+msgstr "Grenzen"
+
+#: .\myapp\templates\countries.html:117
+msgid "Area"
+msgstr "Bereich"
+
+#: .\myapp\templates\countries.html:124
+msgid "Timezones"
+msgstr "Zeitzonen"
+
+#: .\myapp\templates\countries.html:133
+msgid "Top-level domain"
+msgstr "Top-level-domäne"
+
+#: .\myapp\templates\countries.html:158
+msgid "ABOUT"
+msgstr "ÜBER"
+
+#: .\myapp\templates\countries.html:165
+msgid "No results found..."
+msgstr "Keine Ergebnisse gefunden..."
+
+#: .\myapp\templates\countries.html:174 .\myapp\templates\countries.html:175
+msgid "Link to my GitHub page."
+msgstr "Link zu meiner GitHub-Seite."
+
+#: .\myapp\templates\countries.html:178 .\myapp\templates\countries.html:179
+msgid "Made with Django."
+msgstr "Hergestellt mit Django."
 
 #: .\myapp\templates\index.html:17
 msgid "Welcome to the REST Countries Info APP"
