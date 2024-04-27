@@ -24,7 +24,7 @@ msgstr "Cerca un paese..."
 
 #: .\myapp\forms.py:16
 msgid "All"
-msgstr "Tutte"
+msgstr "Tutto"
 
 #: .\myapp\forms.py:17
 msgid "Africa"
@@ -74,7 +74,7 @@ msgstr "Indietro"
 
 #: .\myapp\templates\countries.html:49
 msgid "flag"
-msgstr "bandiera"
+msgstr ""
 
 #: .\myapp\templates\countries.html:51
 msgid "Capital"
@@ -103,7 +103,7 @@ msgstr "Subregione"
 #: .\myapp\templates\countries.html:82 .\myapp\templates\countries.html:84
 #: .\myapp\templates\countries.html:146 .\myapp\templates\countries.html:150
 msgid "emblem"
-msgstr "emblema"
+msgstr ""
 
 #: .\myapp\templates\countries.html:90
 msgid "Currency"
