@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-20 22:23+0200\n"
+"POT-Creation-Date: 2024-04-28 22:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,31 +77,39 @@ msgid "flag"
 msgstr ""
 
 #: .\myapp\templates\countries.html:51
+#: .\myapp\templates\filter_countries.html:8
 msgid "Capital"
 msgstr "Capital"
 
 #: .\myapp\templates\countries.html:55 .\myapp\templates\countries.html:62
 #: .\myapp\templates\countries.html:69 .\myapp\templates\countries.html:76
-#: .\myapp\templates\countries.html:96 .\myapp\templates\countries.html:105
-#: .\myapp\templates\countries.html:114 .\myapp\templates\countries.html:121
-#: .\myapp\templates\countries.html:130 .\myapp\templates\countries.html:137
+#: .\myapp\templates\countries.html:97 .\myapp\templates\countries.html:107
+#: .\myapp\templates\countries.html:116 .\myapp\templates\countries.html:123
+#: .\myapp\templates\countries.html:132 .\myapp\templates\countries.html:139
+#: .\myapp\templates\filter_countries.html:12
+#: .\myapp\templates\filter_countries.html:19
+#: .\myapp\templates\filter_countries.html:26
+#: .\myapp\templates\filter_countries.html:33
 msgid "N/A"
 msgstr "N/A"
 
 #: .\myapp\templates\countries.html:58
+#: .\myapp\templates\filter_countries.html:15
 msgid "Population"
 msgstr "Population"
 
 #: .\myapp\templates\countries.html:65
+#: .\myapp\templates\filter_countries.html:22
 msgid "Region"
 msgstr "Région"
 
 #: .\myapp\templates\countries.html:72
+#: .\myapp\templates\filter_countries.html:29
 msgid "Subregion"
 msgstr "Sous-région"
 
 #: .\myapp\templates\countries.html:82 .\myapp\templates\countries.html:84
-#: .\myapp\templates\countries.html:146 .\myapp\templates\countries.html:150
+#: .\myapp\templates\countries.html:148 .\myapp\templates\countries.html:152
 msgid "emblem"
 msgstr ""
 
@@ -109,39 +117,39 @@ msgstr ""
 msgid "Currency"
 msgstr "Monnaie"
 
-#: .\myapp\templates\countries.html:99
+#: .\myapp\templates\countries.html:100
 msgid "Language"
 msgstr "Langue"
 
-#: .\myapp\templates\countries.html:108
+#: .\myapp\templates\countries.html:110
 msgid "Borders"
 msgstr "Frontières"
 
-#: .\myapp\templates\countries.html:117
+#: .\myapp\templates\countries.html:119
 msgid "Area"
 msgstr "Zone"
 
-#: .\myapp\templates\countries.html:124
+#: .\myapp\templates\countries.html:126
 msgid "Timezones"
 msgstr "Fuseau horaire"
 
-#: .\myapp\templates\countries.html:133
+#: .\myapp\templates\countries.html:135
 msgid "Top-level domain"
 msgstr "Domaine de premier niveau"
 
-#: .\myapp\templates\countries.html:158
+#: .\myapp\templates\countries.html:160
 msgid "ABOUT"
 msgstr "À PROPOS DE"
 
-#: .\myapp\templates\countries.html:165
+#: .\myapp\templates\countries.html:167
 msgid "No results found..."
 msgstr "Pas de résultats trouvés..."
 
-#: .\myapp\templates\countries.html:174 .\myapp\templates\countries.html:175
+#: .\myapp\templates\countries.html:176 .\myapp\templates\countries.html:177
 msgid "Link to my GitHub page."
 msgstr "Lien vers ma page GitHub."
 
-#: .\myapp\templates\countries.html:178 .\myapp\templates\countries.html:179
+#: .\myapp\templates\countries.html:180 .\myapp\templates\countries.html:181
 msgid "Made with Django."
 msgstr "Réalisé avec Django."
 
