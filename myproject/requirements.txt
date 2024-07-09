@@ -9,7 +9,7 @@ python-dotenv==1.0.1
 pyuca==1.2
 requests==2.31.0
 soupsieve==2.5
-sqlparse==0.4.4
+sqlparse==0.5.0
 tzdata==2023.4
 urllib3==2.2.0
 Wikipedia-API==0.6.0
