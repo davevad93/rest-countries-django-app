@@ -7,7 +7,7 @@ django-bootstrap5==23.4
 idna==3.7
 python-dotenv==1.0.1
 pyuca==1.2
-requests==2.31.0
+requests==2.32.2
 soupsieve==2.5
 sqlparse==0.5.0
 tzdata==2023.4
