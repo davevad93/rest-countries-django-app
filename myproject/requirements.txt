@@ -4,7 +4,7 @@ certifi==2024.2.2
 charset-normalizer==3.3.2
 Django==5.0.3
 django-bootstrap5==23.4
-idna==3.6
+idna==3.7
 python-dotenv==1.0.1
 pyuca==1.2
 requests==2.31.0
