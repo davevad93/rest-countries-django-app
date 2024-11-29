@@ -8,7 +8,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% trans "REST Countries Info APP" %}</title>
+    <title>REST Countries Info APP</title>
     {% bootstrap_css %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
@@ -20,10 +20,10 @@
 <body>
     <header>
         <div>
-            <h1>{% trans "Countries of the World" %}</h1>
+            <h1>Countries of the World</h1>
             <form method="get" action="{% url 'search_countries' %}" class="form-inline" id="search-form">
                 {{ search_form.search_term }}
-                <button type="submit" id="search-glass" aria-label="{% trans 'Search' %}">
+                <button type="submit" id="search-glass" aria-label="Search">
                     <i class="fa fa-search"></i>
                 </button>
                 <ul>
@@ -38,7 +38,7 @@
             </form>
             {% else %}
             <button type="button" id="back-button" class="btn btn-primary"
-                onclick="window.location.href='/countries'">{% trans 'Back' %}</button>
+                onclick="window.location.href='/countries'">Back</button>
             {% endif %}
         </div>
     </header>
@@ -46,95 +46,95 @@
         <div id="country-container" class="container">
             {% for country in country_data %}
             <div id="country-card">
-                <img src="{{ country.flags.png }}" alt="{{ country.name.common }} {% trans 'flag' %}" id="img">
+                <img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag" id="img">
                 <h1 id="country-name">{{ country.name.common }}</h1>
-                <p>{% trans 'Capital' %}:
+                <p>Capital:
                     {% if country.capital %}
                     {{ country.capital.0 }}
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
-                <p>{% trans 'Population' %}:
+                <p>Population:
                     {% if country.population %}
                     {{ country.population }}
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
-                <p>{% trans 'Region' %}:
+                <p>Region:
                     {% if country.region %}
                     {{ country.region }}
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
-                <p>{% trans 'Subregion' %}:
+                <p>Subregion:
                     {% if country.subregion %}
                     {{ country.subregion }}
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
                 {% if not search_form.search_term.value %}
                 {% with country.name.common|get_emblems_url as emblems %}
                 {% if emblems %}
-                <img src="{{ emblems }}" alt="{{ country.name.common }} {% trans 'emblem' %}" class="img2">
+                <img src="{{ emblems }}" alt="{{ country.name.common }} emblem" class="img2">
                 {% else %}
-                <img src="{{ country.coatOfArms.svg }}" alt="{{ country.name.common }} {% trans 'emblem' %}"
+                <img src="{{ country.coatOfArms.svg }}" alt="{{ country.name.common }} emblem"
                     class="img2">
                 {% endif %}
                 {% endwith %}
                 {% endif %}
                 {% if search_form.search_term.value %}
-                <p>{% trans 'Currency' %}:
+                <p>Currency:
                     {% if country.currencies %}
                     {% for currency_code, currency_info in country.currencies.items %}
                     {{ currency_info.name }}{% if not forloop.last %},{% endif %}
                     {% endfor %}
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
-                <p>{% trans 'Language' %}:
+                <p>Language:
                     {% if country.languages %}
                     {% for language_code, language_name in country.languages.items %}
                     {{ language_name }}{% if not forloop.last %},{% endif %}
                     {% endfor %}
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
-                <p>{% trans 'Borders' %}:
+                <p>Borders:
                     {% if country.borders %}
                     {% for border_country_code in country.borders %}
                     {{ border_country_code }}{% if not forloop.last %},{% endif %}
                     {% endfor %}
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
-                <p>{% trans 'Area' %}:
+                <p>Area:
                     {% if country.area %}
                     {{ country.area }} km²
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
-                <p>{% trans 'Timezones' %}:
+                <p>Timezones:
                     {% if country.timezones %}
                     {% for timezone in country.timezones %}
                     {{ timezone }}{% if not forloop.last %},{% endif %}
                     {% endfor %}
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
-                <p>{% trans 'Top-level domain' %}:
+                <p>Top-level domain:
                     {% if country.tld %}
                     {{ country.tld.0 }}
                     {% else %}
-                    {% trans 'N/A' %}
+                    N/A
                     {% endif %}
                 </p>
                 {% endif %}
@@ -143,11 +143,11 @@
             {% with country.name.common|get_emblems_url as emblems %}
             {% if emblems %}
             <div class="emblem-card">
-                <img src="{{ emblems }}" alt="{{ country.name.common }} {% trans 'emblem' %}" class="img3">
+                <img src="{{ emblems }}" alt="{{ country.name.common }} emblem" class="img3">
             </div>
             {% elif country.coatOfArms %}
             <div class="emblem-card">
-                <img src="{{ country.coatOfArms.svg }}" alt="{{ country.name.common }} {% trans 'emblem' %}"
+                <img src="{{ country.coatOfArms.svg }}" alt="{{ country.name.common }} emblem"
                     class="img3">
             </div>
             {% endif %}
@@ -155,14 +155,14 @@
             {% endif %}
             {% if country.description %}
             <div id="description-card">
-                <h1>{% trans 'ABOUT' %} {{ country.name.common|upper }}:</h1>
+                <h1>ABOUT {{ country.name.common|upper }}:</h1>
                 <p>{{ country.description }}</p>
             </div>
             {% endif %}
             {% endfor %}
             {% if not country_data %}
             <div id="no-results">
-                <h1>{% trans 'No results found...' %}</h1>
+                <h1>No results found...</h1>
             </div>
             {% endif %}
         </div>
@@ -171,12 +171,12 @@
         <div>
             <p>© 2024 | Davide Presti</p>
             <a class="link" href="https://github.com/davevad93" target="_blank">
-                <img src="{% static 'img/github-mark-white.png' %}" id="logo" alt="{% trans 'Link to my GitHub page.' %}"
-                    title="{% trans 'Link to my GitHub page.' %}">
+                <img src="{% static 'img/github-mark-white.png' %}" id="logo" alt="Link to my GitHub page."
+                    title="Link to my GitHub page.">
             </a>
             <a href="http://www.djangoproject.com/"><img
-                    src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif" alt="{% trans 'Made with Django.' %}"
-                    title="{% trans 'Made with Django.' %}" id="django" /></a>
+                    src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif" alt="Made with Django."
+                    title="Made with Django." id="django" /></a>
         </div>
     </footer>
 </body>

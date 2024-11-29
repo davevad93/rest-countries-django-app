@@ -127,23 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-LANGUAGES = [
-    ('en', 'English'),
-    ('es', 'Spanish'),
-    ('it', 'Italian'),
-    ('fr', 'French'),
-    ('de', 'German'),
-    ('pt', 'Portuguese'),
-]
-
-# Directory where translation files will be stored
-LOCALE_PATHS = [
-    BASE_DIR / 'locale',  
-]
-
 TIME_ZONE = 'UTC'
-
-USE_I18N = True
 
 USE_TZ = True
 
