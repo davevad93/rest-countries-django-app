@@ -18,10 +18,8 @@ load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-STATICFILES_DIRS = [
-    BASE_DIR / 'myapp' / 'static',
-]
+STATICFILES_DIRS = [BASE_DIR / 'myapp' / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles_build'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -30,21 +28,17 @@ STATICFILES_DIRS = [
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
+DEBUG = False
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 # X-Content-Type-Options
 
 SECURE_BROWSER_XSS_FILTER = True
-
 SECURE_HSTS_SECONDS = 31536000
-
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-
 SECURE_HSTS_PRELOAD  = True
-
 SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_SSL_REDIRECT = True
 
 # Application definition
 
@@ -98,10 +92,10 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 # Password validation
@@ -126,9 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
