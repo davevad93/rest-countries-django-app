@@ -31,6 +31,12 @@ jobs:
         cd myproject
         pip install -r requirements.txt
 
+    - name: Apply Migrations
+      run: |
+        cd myproject
+        python manage.py makemigrations
+        python manage.py migrate
+
     - name: Run Django test
       run: |
         cd myproject
