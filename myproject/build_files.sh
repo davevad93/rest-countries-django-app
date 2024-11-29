@@ -1,3 +1,7 @@
-# build_files.sh
+#!/usr/bin/env bash
+
+echo "Installing project requierements..."
 pip install -r requirements.txt
-py manage.py collectstatic --no-input --clear
+
+echo "Collecting static files..." 
+python3 manage.py collectstatic --no-input
