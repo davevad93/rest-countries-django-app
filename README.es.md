@@ -1,11 +1,10 @@
-# Rest Countries Info APP [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) ![Python](https://img.shields.io/badge/python-3.12-blue.svg) ![Django](https://img.shields.io/badge/django-5.0.3-darkgreen.svg)
+# Rest Countries Info APP [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) ![Python](https://img.shields.io/badge/python-3.12-blue.svg) ![Django](https://img.shields.io/badge/django-5.0.9-darkgreen.svg)
 
 ![Homepage](screenshots//countries.JPG)
 
 ## - Introducción -
 
-**Rest Countries Info APP** es un pequeño proyecto construido con Django que utiliza  la [API de REST Countries](https://restcountries.com/) y la [API de Wikipedia](https://www.mediawiki.org/wiki/API:Main_page) para visualizar informaciones detalladas de los países del mundo. Este proyecto se ha desarrollado con Python 3.12, JavaScript, Bootstrap 5, HTML5 y CSS3. Es el primer proyecto que subo a Github y el primero en general desarrollado con Django así que es posible que hayan errores, por lo cual cualquier aportación o consejo será bienvenido.
-
+**Rest Countries Info APP** es un pequeño proyecto construido con Django que utiliza  la [API de REST Countries](https://restcountries.com/) y la [API de Wikipedia](https://www.mediawiki.org/wiki/API:Main_page) para visualizar informaciones detalladas de los países del mundo. Este proyecto se ha desarrollado con Python 3.12, JavaScript, Bootstrap 5, HTML5 y CSS3.
 ## - Requisitos -
 
 Asegúrate de tener Python instalado en tu sístema, para comprobarlo abre la línea de comandos y ejecuta el siguiente comando:
