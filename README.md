@@ -4,7 +4,7 @@
 
 ## - Introduction -
 
-**Rest Countries Info APP** is a small Django project that utilize [REST Countries API](https://restcountries.com/) and [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) to provide specific information about countries around the world. The project is built using Python 3.12, JavaScript, Bootstrap 5, HTML5, CSS3, and JSON.
+**Rest Countries Info APP** is a small Django project that utilize [REST Countries API](https://restcountries.com/) and [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) to provide specific information about countries around the world. The project is built using Python 3.12, JavaScript, Bootstrap 5, HTML5 and CSS3.
 
 ## - Requirements -
 
