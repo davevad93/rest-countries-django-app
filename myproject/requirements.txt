@@ -13,4 +13,5 @@ soupsieve==2.5
 sqlparse==0.5.0
 tzdata==2023.4
 urllib3==2.2.2
+whitenoise==6.8.2
 Wikipedia-API==0.6.0
