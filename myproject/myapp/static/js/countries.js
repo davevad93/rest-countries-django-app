@@ -9,8 +9,8 @@ class CountrySearch {
 
     // Initialize search input and dropdown
     init() {
-        window.onload = () => {
-            this.handleSearchTerm(); // Handle search term
+        document.addEventListener("DOMContentLoaded", () => {
+            this.handleSearchTerm(); // Handle search term //Preferred DOMContentLoaded for better performance and compatibility
             this.searchInput.addEventListener("input", this.handleSearchInputChange.bind(this)); // Listen for input changes
             this.searchInput.addEventListener("keydown", this.handleSearchInputKeyDown.bind(this)); // Listen for keydown events
         };
@@ -21,7 +21,10 @@ class CountrySearch {
     handleSearchInputKeyDown(event) {
         const items = Array.from(this.searchDropdown.children); // Convert dropdown children to array
         if (items.length === 0) return; // Return if no suggestions
-
+        if (event.key === 'Escape') {  
+            this.clearSearchDropdown(); //Use Escape key to close suggestions //new 
+            this.searchInput.blur();
+        }
         if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
             this.handleArrowKeys(event, items); // Handle arrow key navigation
         } else if (event.key === 'Enter') {
