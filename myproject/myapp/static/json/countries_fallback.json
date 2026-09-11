@@ -1,0 +1,115 @@
+[
+  {
+    "name": {
+      "common": "Portugal"
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/pt.png"
+    },
+    "capital": [
+      "Lisbon"
+    ],
+    "population": 10305564,
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "coatOfArms": {
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/pt.svg"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro"
+      }
+    },
+    "languages": {
+      "por": "Portuguese"
+    },
+    "borders": [
+      "ESP"
+    ],
+    "area": 92090,
+    "timezones": [
+      "UTC"
+    ],
+    "tld": [
+      ".pt"
+    ]
+  },
+  {
+    "name": {
+      "common": "Japan"
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/jp.png"
+    },
+    "capital": [
+      "Tokyo"
+    ],
+    "population": 123294513,
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "coatOfArms": {
+      "svg": ""
+    },
+    "currencies": {
+      "JPY": {
+        "name": "Japanese yen"
+      }
+    },
+    "languages": {
+      "jpn": "Japanese"
+    },
+    "borders": [],
+    "area": 377930,
+    "timezones": [
+      "UTC+09:00"
+    ],
+    "tld": [
+      ".jp"
+    ]
+  },
+  {
+    "name": {
+      "common": "Brazil"
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/br.png"
+    },
+    "capital": [
+      "Brasília"
+    ],
+    "population": 203080756,
+    "region": "Americas",
+    "subregion": "South America",
+    "coatOfArms": {
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/br.svg"
+    },
+    "currencies": {
+      "BRL": {
+        "name": "Brazilian real"
+      }
+    },
+    "languages": {
+      "por": "Portuguese"
+    },
+    "borders": [
+      "ARG",
+      "BOL",
+      "COL",
+      "GUY",
+      "PER",
+      "PRY",
+      "SUR",
+      "URY",
+      "VEN"
+    ],
+    "area": 8515767,
+    "timezones": [
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC-03:00"
+    ],
+    "tld": [
+      ".br"
+    ]
+  }
+]

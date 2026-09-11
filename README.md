@@ -90,6 +90,9 @@ If you don't have Python installed go to https://www.python.org/downloads/ and d
     # STEP 5: Create .env file with the "SECRET_KEY" environment variable and paste the generated key in STEP 3. 
 
     echo SECRET_KEY = 'Paste here the key generated in STEP 3' > .env
+
+    # OPTIONAL: preload and cache countries data at startup in production environments.
+    echo PRELOAD_COUNTRIES_ON_STARTUP = 'true' >> .env
 ```
 
 8. Run the development server:
