@@ -1,4 +1,5 @@
 import pyuca
+import logging
 from .forms import RegionFilterForm, CountrySearchForm
 from django.http import JsonResponse
 from django.shortcuts import render
@@ -7,6 +8,23 @@ from .utils import get_cached_countries_data, exclude_countries, get_search_sugg
 
 # Initialize the collator for sorting.
 collator = pyuca.Collator()
+logger = logging.getLogger(__name__)
+COUNTRIES_UNAVAILABLE_MESSAGE = "Country data is temporarily unavailable. Please try again later."
+
+
+def prepare_country_data():
+    try:
+        data = get_cached_countries_data() or []
+        if not data:
+            return [], COUNTRIES_UNAVAILABLE_MESSAGE
+        data = exclude_countries(data)
+        if not data:
+            return [], COUNTRIES_UNAVAILABLE_MESSAGE
+        data.sort(key=lambda country: collator.sort_key(country['name']['common']))
+        return data, None
+    except Exception as exc:
+        logger.exception("Failed to prepare country data: %s", exc)
+        return [], COUNTRIES_UNAVAILABLE_MESSAGE
 
 # Function to render the home page.
 def home(homepage):
@@ -16,13 +34,12 @@ def home(homepage):
 def filter_regions(request):  
     if request.method == 'GET':
         region = request.GET.get('region', '')
-        data = get_cached_countries_data()
-        data = exclude_countries(data)
-        data.sort(key=lambda country: collator.sort_key(country['name']['common']))
+        data, data_error = prepare_country_data()
+        if data_error:
+            return JsonResponse({'data': f'<div id="no-results"><h1>{data_error}</h1></div>'}, status=503)
 
-        if data:
-            filtered_data = filter_countries_by_region(data, region) if region != 'All' else data
-            return JsonResponse({'data': render_to_string('filter_countries.html', {'country_data': filtered_data})})
+        filtered_data = filter_countries_by_region(data, region) if region != 'All' else data
+        return JsonResponse({'data': render_to_string('filter_countries.html', {'country_data': filtered_data})})
 
     return JsonResponse({'data': 'Invalid request'}, status=400)
 
@@ -33,9 +50,9 @@ def search_countries(request):
 
     if request.method == 'GET':
         search_term = request.GET.get('search_term', '')
-        data = get_cached_countries_data()
-        data = exclude_countries(data)
-        data.sort(key=lambda country: collator.sort_key(country['name']['common']))
+        data, data_error = prepare_country_data()
+        if data_error and 'autocomplete' in request.GET:
+            return JsonResponse({'suggestions': []}, status=503)
 
         if 'autocomplete' in request.GET:
             suggestions = get_search_suggestions(data, search_term)
@@ -47,13 +64,22 @@ def search_countries(request):
             for country in data:
                 country['description'] = descriptions.get(country['name']['common'], None)
 
-        return render(request, 'countries.html', {'country_data': data, 'search_form': search_form, 'filter_form': filter_form})
+        status_code = 503 if data_error else 200
+        return render(
+            request,
+            'countries.html',
+            {
+                'country_data': data,
+                'search_form': search_form,
+                'filter_form': filter_form,
+                'error_message': data_error,
+            },
+            status=status_code,
+        )
     
 # Function to display country information in the HTML template.
 def country_info(request):
-    data = get_cached_countries_data()
-    data = exclude_countries(data)
-    data.sort(key=lambda country: collator.sort_key(country['name']['common']))
+    data, data_error = prepare_country_data()
 
     search_form = CountrySearchForm(request.GET)
     filter_form = RegionFilterForm(request.GET)
@@ -71,4 +97,15 @@ def country_info(request):
         if region:
             data = filter_countries_by_region(data, region)
 
-    return render(request, 'countries.html', {'country_data': data, 'search_form': search_form, 'filter_form': filter_form})
+    status_code = 503 if data_error else 200
+    return render(
+        request,
+        'countries.html',
+        {
+            'country_data': data,
+            'search_form': search_form,
+            'filter_form': filter_form,
+            'error_message': data_error,
+        },
+        status=status_code,
+    )

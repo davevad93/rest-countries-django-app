@@ -43,6 +43,11 @@
         </div>
     </header>
     <main>
+        {% if error_message %}
+        <div id="no-results">
+            <h1>{{ error_message }}</h1>
+        </div>
+        {% endif %}
         <div id="country-container" class="container">
             {% for country in country_data %}
             <div id="country-card">
@@ -160,7 +165,7 @@
             </div>
             {% endif %}
             {% endfor %}
-            {% if not country_data %}
+            {% if not country_data and not error_message %}
             <div id="no-results">
                 <h1>No results found...</h1>
             </div>
