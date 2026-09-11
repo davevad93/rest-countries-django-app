@@ -14,7 +14,7 @@ python-dotenv==1.0.1
 pyuca==1.2
 requests==2.33.0
 soupsieve==2.5
-sqlparse==0.5.4
+sqlparse==0.6.0
 tzdata==2023.4
 urllib3==2.6.3
 uvicorn==0.32.1
